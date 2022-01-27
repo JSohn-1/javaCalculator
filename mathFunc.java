@@ -81,6 +81,8 @@ public class mathFunc{
     }
     
     public static Map twoPoints(int x1, int y1, int x2, int y2){
-        
+        HashMap<Object, Object> exports = new HashMap<Object, Object>();
+       
+        return exports;
     }
 }
