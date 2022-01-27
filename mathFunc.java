@@ -1,6 +1,8 @@
 import java.lang.Math;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.HashMap
+import java.util.Map
 
 public class mathFunc{
     
@@ -76,5 +78,9 @@ public class mathFunc{
             }
             return fNumbers;
         }
+    }
+    
+    public static Map twoPoints(int x1, int y1, int x2, int y2){
+        
     }
 }
