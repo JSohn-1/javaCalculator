@@ -28,11 +28,14 @@ public class mathFunc{
     
     //Advanced Methods
     
-    public static String simplifyRad(int n){
+    public static int[] simplifyRad(int n){
         ArrayList<ArrayList<Integer>> numbers = new ArrayList<ArrayList<Integer>>();
+        int[] fNumbers = new int[2];
         
         numbers.add(new ArrayList<Integer>());
         numbers.add(new ArrayList<Integer>());
+        fNumbers[0] = 1;
+        fNumbers[1] = 1;
         
         int total = 1;
         int totalS = 1;
@@ -64,17 +67,14 @@ public class mathFunc{
                     }
                 }
             }
-        }catch (Exception e){
-            int i = 0;
+        }finally{
+            for(int i = 0; i < numbers.get(0).size(); i++){
+                fNumbers[0] = fNumbers[0] *numbers.get(0).get(i);
+            }
+            for(int i = 0; i < numbers.get(1).size(); i++){
+                fNumbers[1] = fNumbers[1] * numbers.get(1).get(i);
+            }
+            return fNumbers;
         }
-        
-        for(int i = 0; i < numbers.get(1).size(); i++){
-            total *= numbers.get(1).get(i);
-        }
-        for(int i = 0; i < numbers.get(0).size(); i++){
-            totalS *= numbers.get(0).get(i);
-        }
-        return("Total is: " + total + " " + totalS);
-
     }
 }
