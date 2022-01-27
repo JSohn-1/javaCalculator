@@ -31,6 +31,9 @@ public class mathFunc{
     public static String simplifyRad(int n){
         ArrayList<ArrayList<Integer>> numbers = new ArrayList<ArrayList<Integer>>();
         
+        numbers.add(new ArrayList<Integer>());
+        numbers.add(new ArrayList<Integer>());
+        
         int total = 1;
         int totalS = 1;
         
@@ -68,11 +71,10 @@ public class mathFunc{
         for(int i = 0; i < numbers.get(1).size(); i++){
             total *= numbers.get(1).get(i);
         }
-      
         for(int i = 0; i < numbers.get(0).size(); i++){
             totalS *= numbers.get(0).get(i);
         }
-      
-        return("Total is: " + total + totalS);
+        return("Total is: " + total + " " + totalS);
+
     }
 }
