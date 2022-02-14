@@ -2,7 +2,46 @@ import java.lang.Math;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
+
+/**
+ * There are various math functions that are supported by this class. 
+ * They come in two categories: Basic, and Advanced
+ * 
+ * Basic:
+ * boolean isPrime(int)
+ * 
+ * returns True if the number entered is prime. False if otherwise.
+ * 
+ * Advanced:
+ * int[] simplifyRad(int) 
+ *
+ * returns 2 numbers, the first one is all of the radical numbers multipled together.
+ * The second number has all of the whole numbers multipled together.
+ * 
+ * HashMap twoPoints(double x1, double y1, double x2, double y2)
+ * 
+ * returns a HashMap which contains various information about 2 points. It contains:
+ * 
+ * key "distance": returns the distance between the points as a double
+ * 
+ * key "exact": returns the radical form as the distance as a double
+ * 
+ * key "slope": returns the slope of the points
+ * 
+ * key "equation": returns the equation of the line as a String
+ * 
+ * key "midpoint_y": returns the midpoint between the y values
+ * 
+ * key "midpoint_x": returns the midpoint between the x values
+ * 
+ * HashMap onePoint(double x1, double x2, double slope)
+ * 
+ * returns a HashMap which contains various information about 1 point. It contains:
+ * 
+ * key "equation": returns the equation of the line as a String
+ * 
+ * key "slope": returns the slope as a double
+*/
 
 public class mathFunc {
 
@@ -57,7 +96,7 @@ public class mathFunc {
             }
         }
 
-        try {
+        try { 
             while (true) {
                 for (int i = 0; i < numbers.get(0).size(); i++) {
                     if (numbers.get(0).get(i) == numbers.get(0).get(i + 1)) {
@@ -80,7 +119,7 @@ public class mathFunc {
         }
     }
 
-    public static Map twoPoints(int x1, int y1, int x2, int y2) {
+    public static HashMap twoPoints(double x1, double y1, double x2, double y2) {
         HashMap<Object, Object> exports = new HashMap<Object, Object>();
 
         // Finds midpoints
@@ -104,7 +143,7 @@ public class mathFunc {
         return exports;
     }
 
-    public static Map onePoint(int x1, int y1, double slope) {
+    public static HashMap onePoint(double x1, double y1, double slope) {
         HashMap<Object, Object> exports = new HashMap<Object, Object>();
 
         // Finds the slope of the points
